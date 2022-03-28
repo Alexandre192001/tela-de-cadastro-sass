@@ -1,0 +1,87 @@
+$background-color:#000;
+/*Zerando valores do browser*/ 
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+
+.sessao-principal{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color:$background-color;
+  .img-section{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: .5;
+    }
+  }
+}
+
+@mixin ElementForm ($margin,$width,$height,$outline,$padding,$border,$border-radius){
+  margin:$margin;
+  width:$width;
+  height:$height;
+  outline:$outline;
+  padding:$padding;
+  border:$border;
+  border-radius: $border-radius;
+}
+
+.form-login{
+  position: relative;
+  z-index: 1;
+  background-color: #99a8;
+  height:25rem;
+  width: 50%;
+  gap: 10px;
+  border-radius: .4rem;
+  box-shadow:1px 1px 1px #000;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .form-title{
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:50px;
+    position: absolute;
+    top: 1rem;
+  }
+
+  .proprie-form input{
+    @include ElementForm(.4rem,90%,2rem,none,.4rem .4rem,none,.4rem)
+  }
+
+  .btn-form{
+    border: none;
+    padding:.4rem 2rem;
+    border-radius:.4rem;
+    color: #fff;
+    background-color: #07a;
+    transition: all 0.4s;
+    &:hover{
+      background-color: #fff;
+      color: #07a;
+      transform: scale(1.2);
+      border: solid 1px #07A;
+    }
+  }
+
+}
+
