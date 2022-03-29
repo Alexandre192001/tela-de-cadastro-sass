@@ -1,22 +1,24 @@
-$background-color:#000;
-/*Zerando valores do browser*/ 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+$font-principal:"Lobster";
+$background-color:rgba(46, 47, 55, 0.994);
+
 *{
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
 
-
 .sessao-principal{
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  height: 100vh;
   background-color:$background-color;
+  width: 100%;
+
   .img-section{
     position: absolute;
     width: 100%;
@@ -27,61 +29,147 @@ $background-color:#000;
       position: absolute;
       width: 100%;
       height: 100%;
-      opacity: .5;
-    }
-  }
-}
 
-@mixin ElementForm ($margin,$width,$height,$outline,$padding,$border,$border-radius){
-  margin:$margin;
-  width:$width;
-  height:$height;
-  outline:$outline;
-  padding:$padding;
-  border:$border;
-  border-radius: $border-radius;
-}
-
-.form-login{
-  position: relative;
-  z-index: 1;
-  background-color: #99a8;
-  height:25rem;
-  width: 50%;
-  gap: 10px;
-  border-radius: .4rem;
-  box-shadow:1px 1px 1px #000;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  .form-title{
-    color: #fff;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size:50px;
-    position: absolute;
-    top: 1rem;
-  }
-
-  .proprie-form input{
-    @include ElementForm(.4rem,90%,2rem,none,.4rem .4rem,none,.4rem)
-  }
-
-  .btn-form{
-    border: none;
-    padding:.4rem 2rem;
-    border-radius:.4rem;
-    color: #fff;
-    background-color: #07a;
-    transition: all 0.4s;
-    &:hover{
-      background-color: #fff;
-      color: #07a;
-      transform: scale(1.2);
-      border: solid 1px #07A;
+      opacity: .3;
     }
   }
 
+  @mixin formElement($border,$outline,$width,$height,$padding,$margin) {
+    border: $border;
+    outline:$outline;
+    width: $width;
+    height: $height;
+    padding: $padding;
+    margin: $margin;
+  }
+
+  .form-login{
+    position: relative;
+    color: #fff;
+    z-index: 1;
+    border:none;
+    width: 60%;
+    box-shadow:1px 1px 1rem #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:30rem;
+    border-radius: .4rem;
+
+    .form-title {
+      position: absolute;
+      top: -4rem;
+      font-size:25px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .form-proprie{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items:center;
+      width: 100%;
+      height: 40%;
+      background-color:rgba(68, 98, 114, 0.844);
+      h2{
+        position: absolute;
+        top: .4rem;
+        text-shadow: 1px 1px 1px #000;
+        font-family:$font-principal;
+      }
+
+      .dados-complementares{
+        display: flex;
+      }
+
+      input{
+        @include formElement(none,none,50%,2rem,.4rem .4rem,.3rem);
+        border-radius:.4rem ;
+      }
+    }
+        
+
+    .form-proprie-genero{
+      position: relative;
+      display:flex;
+      flex-direction: column;
+      text-align: center;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      height: 25%;
+      background-color:rgb(127, 133, 165);
+
+      h2{
+        position: absolute;
+        top: .5rem;
+        font-family:$font-principal;
+        text-shadow: 1px 1px 1px #000;
+      }
+      .elementos-genero{
+        display:flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-family:$font-principal;
+      }
+    }
+
+
+    .form-proprie-conhecimento{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      justify-content: space-around;
+      font-family:$font-principal;
+      width: 100%;
+      height: 35%;
+      background-color:rgba(68, 98, 114, 0.844);
+      
+      h2{
+        position: absolute;
+        top: .4rem;
+        text-shadow: 1px 1px 1px #000;
+        letter-spacing:2px;
+      }
+      .linguagens-prog{
+        font-size: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+    }
+
+    .btn-form{
+      position: absolute;
+      bottom: -2rem;
+      outline: none;
+      border: none;
+      width: 100%;
+      height: 3rem;
+      font-family: $font-principal;
+      color: #fff;
+      cursor: pointer;
+      transition: all .4s;
+      background-color:rgb(72, 79, 116);
+      border-radius:.4rem;
+
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+  }
+
 }
 
+@media(max-width:345px){
+  .sessao-principal{
+    .form-login{
+      width:90%;
+    }
+  }
+  
+  
+}

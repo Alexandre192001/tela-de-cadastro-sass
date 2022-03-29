@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tela de Login com Sass</title>
+  <title>Tela de Cadastro com Sass</title>
   <link rel="stylesheet" href="style/index.css">
   <script  defer src="index.js"></script>
 </head>
 <body>
-  <!-- Tela de login com SCSS -->
+  <!-- Tela de Cadastro com SCSS -->
   <!-- Sessão principal -->
   <section class="sessao-principal">
     <!-- imagem da section -->
@@ -19,17 +19,92 @@
     <!-- Form -->
     <form class="form-login">
       <!-- titulo do form -->
-      <h1 class="form-title">Login</h1>
-      <div class="proprie-form">
-        <!-- Input de login -->
-        <input type="text" autocomplete="off" id="login" placeholder="Informe seu nome aqui">
+      <h1 class="form-title">Cadastro para Devs</h1>
+     <!-- inputs de nome,sobrenome,senha,idade -->
+     <div class="form-proprie">
+       <h2>Dados Pessoais</h2>
+        <div class="dados-complementares">
+          <input type="text" placeholder="Informe seu nome aqui">
+          <input type="text" placeholder="Informe seu sobrenome aqui">
+        </div>
+       
+       <input type="password" maxlength="10" id="senha" placeholder="Informe sua senha aqui">
+       <input type="number" placeholder="Informe sua idade">
+     </div>
+   
+     <!-- gênero -->
+     <div class="form-proprie-genero">
+       <h2>Gênero</h2>
+
+       <div class="elementos-genero">
+
+         <div class="generos">
+          <label for="masculino">Masculino</label>
+          <input type="radio" name="genero" id="masculino">
+         </div>
+
+         <div class="generos">
+          <label for="feminino">Feminino</label>
+          <input type="radio" name="genero" id="feminino">
+        </div>
+
+        <div class="generos">
+          <label for="prefiro_n_informar">Prefiro não Informar</label>
+          <input type="radio" name="genero" id="prefiro_n_informar">
+        </div>
+       
+       </div>
+        
+    </div>
+    <!-- Linguagens que  o dev tem habilidade -->
+    <div class="form-proprie-conhecimento">
+      <h2>Habilidades:</h2>
+    <div class="linguagens-prog">
+      <div class="tecnologia">
+        <label for="HTML">HTML</label>
+        <input type="checkbox"  id="html">
       </div>
-       <!-- Input de senha -->
-      <div class="proprie-form">
-        <input type="password" id="password" placeholder="Informe sua senha">
+
+      <div class="tecnologia">
+        <label for="CSS">CSS</label>
+      <input type="checkbox"  id="css">
       </div>
+
+      <div class="tecnologia">
+        <label for="js">JavaScript</label>
+        <input type="checkbox" id="js">
+      </div>
+
+      <div class="tecnologia">
+        <label for="sass">Sass</label>
+      <input type="checkbox"  id="sass">
+      </div>
+
+      <div class="tecnologia">
+        <label for="python">Python</label>
+      <input type="checkbox"  id="python">
+      </div>
+
+      <div class="tecnologia">
+        <label for="Mongodb">MongoDB</label>
+      <input type="checkbox"  id="Mongdb">
+      </div>
+
+      <div class="tecnologia">
+        
+      <label for="NodeJS">NodeJs</label>
+      <input type="checkbox"  id="NodeJS">
+      </div>
+
+      <div class="tecnologia">
+      <label for="outros">Outros</label>
+      <input type="checkbox" id="outros">
+      </div>
+  
+    </div>
+    </div>
       <!-- Input para enviar dados do form -->
-      <button class="btn-form">Entrar</button>
+      <button class="btn-form">Finalizar Cadastro</button>
     </form>
   </section>
 </body>

@@ -1,4 +1,4 @@
-/*Zerando valores do browser*/
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 * {
   margin: 0%;
   padding: 0%;
@@ -7,14 +7,13 @@
 
 .sessao-principal {
   position: relative;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: rgba(46, 47, 55, 0.994);
   width: 100%;
-  overflow: hidden;
-  background-color: #000;
 }
 .sessao-principal .img-section {
   position: absolute;
@@ -26,52 +25,125 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  opacity: 0.5;
+  opacity: 0.3;
 }
-
-.form-login {
+.sessao-principal .form-login {
   position: relative;
+  color: #fff;
   z-index: 1;
-  background-color: #99a8;
-  height: 25rem;
-  width: 50%;
-  gap: 10px;
+  border: none;
+  width: 60%;
+  box-shadow: 1px 1px 1rem #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30rem;
   border-radius: 0.4rem;
-  box-shadow: 1px 1px 1px #000;
+}
+.sessao-principal .form-login .form-title {
+  position: absolute;
+  top: -4rem;
+  font-size: 25px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.sessao-principal .form-login .form-proprie {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40%;
+  background-color: rgba(68, 98, 114, 0.844);
+}
+.sessao-principal .form-login .form-proprie h2 {
+  position: absolute;
+  top: 0.4rem;
+  text-shadow: 1px 1px 1px #000;
+  font-family: "Lobster";
+}
+.sessao-principal .form-login .form-proprie .dados-complementares {
+  display: flex;
+}
+.sessao-principal .form-login .form-proprie input {
+  border: none;
+  outline: none;
+  width: 50%;
+  height: 2rem;
+  padding: 0.4rem 0.4rem;
+  margin: 0.3rem;
+  border-radius: 0.4rem;
+}
+.sessao-principal .form-login .form-proprie-genero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  height: 25%;
+  background-color: #7f85a5;
+}
+.sessao-principal .form-login .form-proprie-genero h2 {
+  position: absolute;
+  top: 0.5rem;
+  font-family: "Lobster";
+  text-shadow: 1px 1px 1px #000;
+}
+.sessao-principal .form-login .form-proprie-genero .elementos-genero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: "Lobster";
+}
+.sessao-principal .form-login .form-proprie-conhecimento {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  font-family: "Lobster";
+  width: 100%;
+  height: 35%;
+  background-color: rgba(68, 98, 114, 0.844);
 }
-.form-login .form-title {
-  color: #fff;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 50px;
+.sessao-principal .form-login .form-proprie-conhecimento h2 {
   position: absolute;
-  top: 1rem;
+  top: 0.4rem;
+  text-shadow: 1px 1px 1px #000;
+  letter-spacing: 2px;
 }
-.form-login .proprie-form input {
-  margin: 0.4rem;
-  width: 90%;
-  height: 2rem;
+.sessao-principal .form-login .form-proprie-conhecimento .linguagens-prog {
+  font-size: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.sessao-principal .form-login .btn-form {
+  position: absolute;
+  bottom: -2rem;
   outline: none;
-  padding: 0.4rem 0.4rem;
   border: none;
-  border-radius: 0.4rem;
-}
-.form-login .btn-form {
-  border: none;
-  padding: 0.4rem 2rem;
-  border-radius: 0.4rem;
+  width: 100%;
+  height: 3rem;
+  font-family: "Lobster";
   color: #fff;
-  background-color: #07a;
+  cursor: pointer;
   transition: all 0.4s;
+  background-color: #484f74;
+  border-radius: 0.4rem;
 }
-.form-login .btn-form:hover {
-  background-color: #fff;
-  color: #07a;
-  transform: scale(1.2);
-  border: solid 1px #07A;
+.sessao-principal .form-login .btn-form:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 345px) {
+  .sessao-principal .form-login {
+    width: 90%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
