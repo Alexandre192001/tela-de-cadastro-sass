@@ -1,10 +1,14 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+/*Variaveis*/
+/*Zerando valores padrão dos navegadores*/
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
 
+/*Sessão main*/
 .sessao-principal {
   position: relative;
   overflow: hidden;
@@ -15,12 +19,17 @@
   height: 100vh;
   background-color: rgba(46, 47, 55, 0.994);
   width: 100%;
+  /*Imagem de fundo do main - pai*/
+  /*Definindo alguns valores com mixin*/
+  /*Formulario de login*/
+  /*Estilização do botão voltar*/
 }
 .sessao-principal .img-section {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /*Configurando imagem*/
 }
 .sessao-principal .img-section img {
   position: absolute;
@@ -41,10 +50,15 @@
   align-items: center;
   height: 30rem;
   border-radius: 0.4rem;
+  /*Titulo do form*/
+  /*Dados pessoais do dev*/
+  /*parte de genero do form*/
+  /*Parte de conhecimento do dev no form*/
+  /*Botão de enviar form*/
 }
 .sessao-principal .form-login .form-title {
   position: absolute;
-  top: -4rem;
+  top: -1.5rem;
   font-size: 25px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
@@ -57,6 +71,9 @@
   width: 100%;
   height: 40%;
   background-color: rgba(68, 98, 114, 0.844);
+  /*Nome "Dados pessoais"*/
+  /*Container do nome e sobrenome*/
+  /*Estilizando campos inputs*/
 }
 .sessao-principal .form-login .form-proprie h2 {
   position: absolute;
@@ -87,6 +104,8 @@
   justify-content: center;
   height: 25%;
   background-color: #7f85a5;
+  /*Nome "Generos" do form*/
+  /*container com gêneros*/
 }
 .sessao-principal .form-login .form-proprie-genero h2 {
   position: absolute;
@@ -110,6 +129,8 @@
   width: 100%;
   height: 35%;
   background-color: rgba(68, 98, 114, 0.844);
+  /*nome "conhecimento"*/
+  /*Container com linguagens para dev*/
 }
 .sessao-principal .form-login .form-proprie-conhecimento h2 {
   position: absolute;
@@ -136,6 +157,7 @@
   transition: all 0.4s;
   background-color: #484f74;
   border-radius: 0.4rem;
+  /*Animação de hover no botão enviar*/
 }
 .sessao-principal .form-login .btn-form:hover {
   transform: scale(1.1);
@@ -156,6 +178,7 @@
   font-family: arial;
 }
 
+/*Responsividade*/
 @media (max-width: 345px) {
   .sessao-principal .form-login {
     width: 90%;

@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+/*Variaveis*/
 $font-principal:"Lobster";
 $background-color:rgba(46, 47, 55, 0.994);
 
+/*Zerando valores padrão dos navegadores*/ 
 *{
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
 
+/*Sessão main*/
 .sessao-principal{
   position: relative;
   overflow: hidden;
@@ -20,21 +23,24 @@ $background-color:rgba(46, 47, 55, 0.994);
   background-color:$background-color;
   width: 100%;
 
+  /*Imagem de fundo do main - pai*/
   .img-section{
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
 
+
+    /*Configurando imagem*/
     img{
       position: absolute;
       width: 100%;
       height: 100%;
-
       opacity: .3;
     }
   }
 
+  /*Definindo alguns valores com mixin*/
   @mixin formElement($border,$outline,$width,$height,$padding,$margin) {
     border: $border;
     outline:$outline;
@@ -44,6 +50,7 @@ $background-color:rgba(46, 47, 55, 0.994);
     margin: $margin;
   }
 
+  /*Formulario de login*/
   .form-login{
     position: relative;
     color: #fff;
@@ -58,12 +65,15 @@ $background-color:rgba(46, 47, 55, 0.994);
     height:30rem;
     border-radius: .4rem;
 
+    /*Titulo do form*/
     .form-title {
       position: absolute;
-      top: -4rem;
+      top: -1.5rem;
       font-size:25px;
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
+
+    /*Dados pessoais do dev*/
     .form-proprie{
       position: relative;
       display: flex;
@@ -73,6 +83,8 @@ $background-color:rgba(46, 47, 55, 0.994);
       width: 100%;
       height: 40%;
       background-color:rgba(68, 98, 114, 0.844);
+
+      /*Nome "Dados pessoais"*/
       h2{
         position: absolute;
         top: .4rem;
@@ -80,17 +92,19 @@ $background-color:rgba(46, 47, 55, 0.994);
         font-family:$font-principal;
       }
 
+      /*Container do nome e sobrenome*/
       .dados-complementares{
         display: flex;
       }
 
+      /*Estilizando campos inputs*/ 
       input{
         @include formElement(none,none,50%,2rem,.4rem .4rem,.3rem);
         border-radius:.4rem ;
       }
     }
         
-
+    /*parte de genero do form*/ 
     .form-proprie-genero{
       position: relative;
       display:flex;
@@ -103,12 +117,15 @@ $background-color:rgba(46, 47, 55, 0.994);
       height: 25%;
       background-color:rgb(127, 133, 165);
 
+      /*Nome "Generos" do form*/
       h2{
         position: absolute;
         top: .5rem;
         font-family:$font-principal;
         text-shadow: 1px 1px 1px #000;
       }
+
+      /*container com gêneros*/
       .elementos-genero{
         display:flex;
         flex-wrap: wrap;
@@ -117,7 +134,7 @@ $background-color:rgba(46, 47, 55, 0.994);
       }
     }
 
-
+    /*Parte de conhecimento do dev no form*/
     .form-proprie-conhecimento{
       position: relative;
       display: flex;
@@ -129,12 +146,15 @@ $background-color:rgba(46, 47, 55, 0.994);
       height: 35%;
       background-color:rgba(68, 98, 114, 0.844);
       
+      /*nome "conhecimento"*/
       h2{
         position: absolute;
         top: .4rem;
         text-shadow: 1px 1px 1px #000;
         letter-spacing:2px;
       }
+
+      /*Container com linguagens para dev*/
       .linguagens-prog{
         font-size: 15px;
         display: flex;
@@ -143,6 +163,7 @@ $background-color:rgba(46, 47, 55, 0.994);
       }
     }
 
+    /*Botão de enviar form*/
     .btn-form{
       position: absolute;
       bottom: -2rem;
@@ -157,11 +178,14 @@ $background-color:rgba(46, 47, 55, 0.994);
       background-color:rgb(72, 79, 116);
       border-radius:.4rem;
 
+      /*Animação de hover no botão enviar*/ 
       &:hover{
         transform: scale(1.1);
       }
     }
   }
+
+  /*Estilização do botão voltar*/
   a{
     display:block;
     position: absolute;
@@ -177,10 +201,9 @@ $background-color:rgba(46, 47, 55, 0.994);
     border-radius:.4rem;
     font-family: arial;
   }
-
- 
 }
 
+/*Responsividade*/
 @media(max-width:345px){
   .sessao-principal{
     .form-login{
