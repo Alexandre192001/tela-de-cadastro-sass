@@ -50,17 +50,10 @@
   align-items: center;
   height: 30rem;
   border-radius: 0.4rem;
-  /*Titulo do form*/
   /*Dados pessoais do dev*/
   /*parte de genero do form*/
   /*Parte de conhecimento do dev no form*/
   /*Botão de enviar form*/
-}
-.sessao-principal .form-login .form-title {
-  position: absolute;
-  top: -1.5rem;
-  font-size: 25px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 .sessao-principal .form-login .form-proprie {
   position: relative;
